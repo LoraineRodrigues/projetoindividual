@@ -1,0 +1,25 @@
+<div class="container">
+    <div class= "row" *ngIf="mostrarPiada; else piadaUnica">
+      <div class= "col-md-6" *ngFor="let piada of blocoPiadas">
+          <div class="jumbotron">
+              <h1 class="display-4">Albert Einstein</h1>
+              <p class="lead">O que a esposa do Albert Einstein disse quando ele tirou a roupa na sua lua de mel?</p>
+              <hr class="my-4">
+              <button (click)="esconderPiada()" type="button" class="btn btn-outline-dark">O que?</button>
+              <app-alerta></app-alerta>
+            </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #piadaUnica>
+    <div class="row">
+      <div class="col-md-12">
+          <div class="jumbotron">
+              <h1 class="display-4">Fotógrafo</h1>
+              <p class="lead">Você conhece a piada do fotógrafo?</p>
+              <hr class="my-4">
+              <button (click)= "voltarPiada()" type="button" class="btn btn-outline-warning">Não. Qual?</button>
+            </div>
+      </div>
+    </div>
+  </ng-template>
