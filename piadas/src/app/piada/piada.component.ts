@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-piada',
-  templateUrl: './piada.component.html',
-  styleUrls: ['./piada.component.css']
+  templateUrl: './piada.component.html'
 })
 export class PiadaComponent implements OnInit {
   
@@ -18,9 +17,11 @@ export class PiadaComponent implements OnInit {
  public esconderPiada() {
    this.mostrarPiada = false;
  }
-  public voltarPiada () {
+  public voltarPiada() {
     this.mostrarPiada = true;
 
  }
-
+public mostrarAlerta() {
+alert('Que bom! *u*')
+}
 }
