@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PiadaComponent implements OnInit {
   
-  blocoPiada: string[] = ["Primeira piada", "Segunda piada", "Terceira piada", "Quarta piada"];
+  blocoPiada: string[] = ["Primeira piada", "Segunda piada", "Terceira piada", "Quarta piada", "Quinta piada", "Sexta piada"];
   
   mostrarPiada: boolean = true;  
   
@@ -21,7 +21,11 @@ export class PiadaComponent implements OnInit {
     this.mostrarPiada = true;
 
  }
-public mostrarAlerta() {
-alert('Que bom! *u*')
+public mostrarAlerta1() {
+alert ('Que bom!      *_____*')
+}
+
+public mostrarAlerta2() {
+  alert('Ah... Que pena! ¬_¬                              Tente outra piada! *u*')
 }
 }

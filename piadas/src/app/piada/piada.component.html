@@ -1,24 +1,36 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row" *ngIf="mostrarPiada; else piadaUnica">
     <div class="col-md-6" *ngFor="let piada of blocoPiada">
       <div class="jumbotron">
-        <h1 class="display-4">Albert Einstein</h1>
-        <p class="lead">O que a esposa do Albert Einstein disse quando ele tirou a roupa na sua lua de mel?</p>
+        <h1 class="display-4">{{ titulo }}</h1>
+        <p class="lead">{{ texto }}</p>
         <hr class="my-4">
         <button (click)="esconderPiada()" type="button" class="btn btn-outline-dark">O que?</button>
       </div>
     </div>
   </div>
 </div>
+<div class="row">
+  <app-piada-1></app-piada-1>
+  <app-piada-2></app-piada-2> 
+  <app-piada-3></app-piada-3>
+</div>
 <ng-template #piadaUnica>
-  <div class="row">
-    <div class="col-md-12">
+  <div class="container">
+    <div class="col-md-10">
       <div class="jumbotron">
-        <h1 class="display-4">Que físico!</h1>
+        <h1 class="display-10">{{ resposta }}</h1>
+        <p></p> 
         <p class="lead">Gostou da piada?</p>
         <hr class="my-4">
-        <button (click)="mostrarAlerta()" type="button" class="btn btn-outline-warning">sim</button>
+        <button (click)="mostrarAlerta1()" type="button" class="btn btn-outline-success">sim</button>
+        <button (click)="mostrarAlerta2()" type="button" class="btn btn-outline-danger">não</button>
       </div>
     </div>
+  </div>
+  <div class="row">
+    <app-resposta-piada-1></app-resposta-piada-1>
+    <app-resposta-piada-2></app-resposta-piada-2> 
+    <app-resposta-piada-3></app-resposta-piada-3>
   </div>
 </ng-template>
